@@ -25,26 +25,31 @@ the purpose of deadlock detection in a distributed system.
 
 ### Case-1 Deadlock is detected
 
-#### Input
+#### Input:
 No. of processes = 5; 
 Initiating process = P1
 
 WFG:
+```
     P1 P2 P3 P4 P5
 P1  0  0  1  0  0  
 P2  1  0  0  1  0  
 P3  0  1  0  0  1  
 P4  0  0  0  0  0  
 P5  0  0  0  0  0
+```
 
-#### Output
+
+#### Output:
 Deadlock detected at `Probe(i=1,j=2,k=1)`
 
-#### Case-2 No deadlock is detected
+### Case-2 No deadlock is detected
+#### Input:
 No. of processes = 5;
 Initiating process = P1
 
 WFG:
+```
    P1 P2 P3 P4 P5
 P1  0  0  1  0  0  
 P2  1  0  0  1  0  
@@ -52,5 +57,7 @@ P3  0  1  0  0  1
 P4  0  0  0  0  0  
 P5  0  0  0  0  0
 
-#### Output
+```
+
+#### Output:
 No deadlock detected
